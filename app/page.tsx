@@ -101,15 +101,16 @@ export default async function Home() {
             </div>
           </section>
           <div className=" text-center space-y-12">
-            <div className="text-center text-5xl font-bold">
-                Streaming on  
+            <div className="text-center text-text font-bold">
+                Subscribe for  
                 <div className="relative inline-grid grid-cols-1 grid-rows-1 gap-12 overflow-hidden">
-                  <span className="animate-word col-span-full row-span-full">Twitch</span>
-                  <span className="animate-word-delay-1 col-span-full row-span-full">YouTube</span>
-                  <span className="animate-word-delay-2 col-span-full row-span-full">Website</span>
-                  {/* <span className="animate-word-delay-3 col-span-full row-span-full">VueJS</span>
-                  <span className="animate-word-delay-4 col-span-full row-span-full">NuxtJS</span> */}
+                  <span className="animate-word col-span-full row-span-full">Linux</span>
+                  <span className="animate-word-delay-1 col-span-full row-span-full">Coding</span>
+                  <span className="animate-word-delay-2 col-span-full row-span-full">DevOps</span>
+                  <span className="animate-word-delay-3 col-span-full row-span-full">Cannabis</span>
+                  <span className="animate-word-delay-4 col-span-full row-span-full">Gaming</span>
                 </div>
+              content
             </div>
           </div>
       </div>
