@@ -5,18 +5,18 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
 		"./components/**/*.{js,ts,jsx,tsx}",
 	],
-  theme: {
-    extend: {
-      backgroundImage: {
-        'catppuccin': "url('../../public/images/magenta-blue.png')",
-      },
-  }
-  },
+  // theme: {
+  //   extend: {
+  //     backgroundImage: {
+  //       'catppuccin': "url('../../public/images/magenta-blue.png')",
+  //     },
+  // }
+  // },
   plugins: [
 		require("@tailwindcss/forms"),
 		require("@catppuccin/tailwindcss")({
 			prefix: false,
-			defaultFlavour: "frappe",
+			defaultFlavour: "latte",
 		}),
   ],
 };

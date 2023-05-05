@@ -7,6 +7,7 @@ import Delete from "./blog/Delete";
 import { type Session } from "next-auth";
 
 import "../src/styles/home.css"
+import CollorSchemeSwitcher from "../src/components/Home"
 
 import { Featured } from "./Featured"
 import { Intro } from "./Intro"
@@ -52,6 +53,9 @@ export default async function Home() {
     <>
     <div className="relative">
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center">
+        <div className="from-mantle to-crust">
+          <CollorSchemeSwitcher />
+        </div>
         <Intro />
         <p>Scroll Down</p>
       </div>
