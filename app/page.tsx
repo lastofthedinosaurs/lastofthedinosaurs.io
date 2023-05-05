@@ -1,7 +1,6 @@
 import { SignIn, SignOut } from "./blog/Actions";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/server/auth";
-import Image from "next/image";
 import Form from "./blog/Form";
 import { prisma } from "@/server/db";
 import Delete from "./blog/Delete";
@@ -50,24 +49,24 @@ export default async function Home() {
   }
 
   return (
-<>
-<div className="relative">
-  <div className="sticky top-0 h-screen flex flex-col items-center justify-center bg-blue">
-    <Intro />
-    <p>Scroll Down</p>
-  </div>
-  <div className="sticky top-0 h-screen flex flex-col items-center justify-center bg-green text-white">
-    <Featured />
-    <p>Scroll Down</p>
-  </div>
-  <div className="sticky top-0 h-screen flex flex-col items-center justify-center bg-mauve text-white">
-    <h2 className="text-4xl">The Third Title</h2>
-    <p>Scroll Down</p>
-  </div>
-  <div className="sticky top-0 h-screen flex flex-col items-center justify-center bg-flamingo text-white">
-    <h2 className="text-4xl">The Fourth Title</h2>
-  </div>
-</div>
-</>
+    <>
+    <div className="relative">
+      <div className="sticky top-0 h-screen flex flex-col items-center justify-center">
+        <Intro />
+        <p>Scroll Down</p>
+      </div>
+      <div className="sticky top-0 h-screen flex flex-col items-center justify-center bg-green text-white">
+        <Featured />
+        <p>Scroll Down</p>
+      </div>
+      <div className="sticky top-0 h-screen flex flex-col items-center justify-center bg-mauve text-white">
+        <h2 className="text-4xl">The Third Title</h2>
+        <p>Scroll Down</p>
+      </div>
+      <div className="sticky top-0 h-screen flex flex-col items-center justify-center bg-flamingo text-white">
+        <h2 className="text-4xl">The Fourth Title</h2>
+      </div>
+    </div>
+    </>
   );
 }

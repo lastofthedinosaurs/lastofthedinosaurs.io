@@ -6,7 +6,11 @@ module.exports = {
 		"./components/**/*.{js,ts,jsx,tsx}",
 	],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'catppuccin': "url('../../public/images/magenta-blue.png')",
+      },
+  }
   },
   plugins: [
 		require("@tailwindcss/forms"),

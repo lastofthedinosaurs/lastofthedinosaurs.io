@@ -37,7 +37,7 @@ export default function Delete({ id }: { id: string }) {
       type="button"
       // eslint-disable-next-line @typescript-eslint/no-misused-promises
       onClick={onClick}
-    >
+      >
       {isMutating ? "Deleting..." : "Delete"}
     </button>
   );

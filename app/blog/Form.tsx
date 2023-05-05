@@ -45,7 +45,7 @@ export default function Form() {
       className="relative max-w-[500px] text-sm"
       // eslint-disable-next-line @typescript-eslint/no-misused-promises
       onSubmit={onSubmit}
-    >
+      >
       <input
         aria-label="Your message"
         placeholder="Your message..."
@@ -54,12 +54,12 @@ export default function Form() {
         type="text"
         required
         className="mt-1 block w-full rounded-md border-neutral-300 bg-gray-100 py-3 pl-4 pr-32 text-neutral-900 focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-800 dark:text-neutral-100"
-      />
+        />
       <button
         className="absolute right-1 top-2 flex h-9 w-16 items-center justify-center rounded bg-neutral-200 px-2 py-1 font-medium text-neutral-900 dark:bg-neutral-700 dark:text-neutral-100"
         disabled={isMutating}
         type="submit"
-      >
+        >
         Send
       </button>
     </form>
