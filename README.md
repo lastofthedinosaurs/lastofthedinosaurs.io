@@ -8,9 +8,11 @@ NOTE: As this is a non-root container, the mounted files and directories must ha
 
 ```
 cp .env.example .env
-mkdir postgresql-persistence
-sudo chown 1001:1001 postgresql-persistence/
-docker compose up
+export NODE_ENV="development"
+docker-compose up -d --force-recreate --no-deps --build db
+npm install
+npx prisma db push
+npm run dev
 ```
 
 ## View

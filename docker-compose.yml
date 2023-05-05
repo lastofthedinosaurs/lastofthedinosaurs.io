@@ -1,36 +1,42 @@
 version: '3.8'
 services:
-  database:
-    container_name: last-db
+  db:
     image: 'postgres:15-alpine'
     ports:
       - '5432:5432'
     environment:
       POSTGRES_PASSWORD: password123
-      POSTGRES_USER: admin
+      POSTGRES_USER: postgres
       POSTGRES_DB: posts
+      LANG: en_US.utf8
+    volumes:
+      - postgres:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "sh -c 'pg_isready -U ${POSTGRESQL_USERNAME} -d ${POSTGRESQL_DATABASE}'"]
+      test: ["CMD-SHELL", "sh -c 'pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}'"]
       interval: 10s
       timeout: 3s
       retries: 3
-    network_mode: bridge
+    networks:
+      - backend
 
-  frontend:
-    container_name: last-frontend
-    build:
-      context: ./
-      target: runner
-    env_file:
-      - .env
-    depends_on:
-      database:
-        condition: service_healthy
-        restart: true
-    command: npm run dev
-    ports:
-      - '3000:3000'
+  # web:
+  #   image: "node:19"
+  #   user: "node"
+  #   working_dir: /home/node/app
+  #   environment:
+  #     - NODE_ENV=production
+  #   volumes:
+  #     - ./:/home/node/app
+  #   expose:
+  #     - "8081"
+  #   command: "npm start"
+  #   ports:
+  #     - '3000:3000'
+  #   networks:
+  #     - backend
 
+networks:
+  backend:
+    driver: bridge
 volumes:
-  postgresql_data:
-    driver: local
+  postgres:
