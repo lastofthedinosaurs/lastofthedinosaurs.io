@@ -4,8 +4,6 @@ Personal website
 
 ## Run
 
-NOTE: As this is a non-root container, the mounted files and directories must have the proper permissions for the UID `1001`.
-
 ```
 cp .env.example .env
 export NODE_ENV="development"
